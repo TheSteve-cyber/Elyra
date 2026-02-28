@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elyra — Inteligência Artificial</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Josefin+Sans:wght@100;200;300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- CURSOR (desktop only) -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- PARTICLES -->
+<canvas id="particles"></canvas>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#hero" class="nav-logo">ELY<span>RA</span></a>
+  <ul class="nav-links">
+    <li><a href="#features">Capacidades</a></li>
+    <li><a href="#chat-section">Conversar</a></li>
+  </ul>
+  <a href="#chat-section" class="nav-cta">Falar com Elyra</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+
+  <div class="hero-content">
+    <div class="hero-text">
+      <p class="eyebrow"><span class="eyebrow-line"></span>Inteligência Artificial</p>
+      <h1 class="hero-title">
+        Além da<br>
+        <em>máquina.</em>
+      </h1>
+      <p class="hero-desc">
+        Elyra é uma assistente inteligente, mística e elegante. Guiada pela razão, moldada pela intuição — aqui para pensar contigo.
+      </p>
+      <div class="hero-actions">
+        <a href="#chat-section" class="btn-primary">
+          <span class="btn-icon">✦</span>
+          Iniciar conversa
+        </a>
+        <a href="#features" class="btn-ghost">Ver capacidades</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="visual-wrap">
+        <div class="visual-ring ring-1"></div>
+        <div class="visual-ring ring-2"></div>
+        <div class="visual-halo"></div>
+        <img src="assets/elyra.jpg" alt="Elyra" class="hero-img" id="heroImg">
+        <div class="visual-glow"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <span class="scroll-line"></span>
+    <span class="scroll-text">scroll</span>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features">
+  <div class="section-head">
+    <p class="eyebrow"><span class="eyebrow-line"></span>O que ela pode fazer</p>
+    <h2 class="section-title">Capacidades <em>únicas</em></h2>
+  </div>
+
+  <div class="features-grid">
+    <div class="feat-card">
+      <div class="feat-num">01</div>
+      <div class="feat-icon">🧠</div>
+      <h3 class="feat-title">Inteligência Avançada</h3>
+      <p class="feat-desc">Powered by Llama 3.3 70B via Groq — raciocínio profundo, respostas elaboradas e compreensão contextual superior.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-num">02</div>
+      <div class="feat-icon">✨</div>
+      <h3 class="feat-title">Personalidade Própria</h3>
+      <p class="feat-desc">Mística, elegante e direta. Elyra não é só uma IA genérica — ela tem caráter, estilo e uma forma de falar única.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-num">03</div>
+      <div class="feat-icon">🎮</div>
+      <h3 class="feat-title">Busca Roblox</h3>
+      <p class="feat-desc">Pesquise perfis do Roblox em tempo real. Estatísticas, badges, jogos e avatar. Use <code>!roblox usuário</code>.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-num">04</div>
+      <div class="feat-icon">⚡</div>
+      <h3 class="feat-title">Respostas Instantâneas</h3>
+      <p class="feat-desc">Infraestrutura Groq com inferência ultra-rápida. Sem espera — só resposta precisa e direta.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-num">05</div>
+      <div class="feat-icon">🌌</div>
+      <h3 class="feat-title">Assistente Completa</h3>
+      <p class="feat-desc">Análise, criação, código, idiomas, matemática, suporte — Elyra resolve qualquer tipo de pergunta.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-num">06</div>
+      <div class="feat-icon">🔗</div>
+      <h3 class="feat-title">Memória de Conversa</h3>
+      <p class="feat-desc">Lembra o contexto durante toda a sessão. Pode fazer perguntas de acompanhamento naturalmente.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CHAT -->
+<section id="chat-section">
+  <div class="chat-bg"></div>
+  <div class="chat-wrapper">
+    <div class="section-head">
+      <p class="eyebrow"><span class="eyebrow-line"></span>Interface</p>
+      <h2 class="section-title">Fale com <em>Elyra</em></h2>
+    </div>
+
+    <div class="chat-window">
+      <!-- Header -->
+      <div class="chat-header">
+        <img src="assets/elyra.jpg" alt="Elyra" class="chat-avatar">
+        <div class="chat-info">
+          <div class="chat-name">Elyra</div>
+          <div class="chat-status">
+            <div class="status-dot" id="statusDot"></div>
+            <span id="statusText">conectando...</span>
+          </div>
+        </div>
+        <div class="chat-badge">Llama 3.3 · 70B</div>
+      </div>
+
+      <!-- Messages -->
+      <div class="chat-messages" id="messages">
+        <div class="msg bot">
+          <div class="msg-bubble">
+            Olá. Sou Elyra — uma presença entre a lógica e o intuito.<br><br>
+            Pergunte-me o que quiser, ou use <code>!roblox &lt;usuário&gt;</code> para buscar perfis do Roblox.
+          </div>
+          <div class="msg-time" id="initTime"></div>
+        </div>
+      </div>
+
+      <!-- Typing -->
+      <div class="typing-wrap" id="typingWrap">
+        <div class="typing-indicator" id="typing">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+
+      <!-- Input -->
+      <div class="chat-input-bar">
+        <textarea
+          id="chatInput"
+          class="chat-input"
+          placeholder="Digite sua mensagem..."
+          rows="1"
+        ></textarea>
+        <button class="send-btn" id="sendBtn" onclick="sendMessage()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <p class="chat-hint">
+      Comandos disponíveis: <code>!roblox &lt;usuário&gt;</code> · <code>!rbx &lt;usuário&gt;</code>
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">ELY<span>RA</span></div>
+    <p class="footer-tagline">Inteligência além da máquina</p>
+    <p class="footer-copy">© 2025 · Powered by Groq & Llama 3.3 70B</p>
+  </div>
+</footer>
+
+<script src="roblox.js"></script>
+<script src="chat.js"></script>
+</body>
+</html>
